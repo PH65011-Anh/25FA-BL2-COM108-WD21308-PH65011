@@ -9,13 +9,33 @@ void uocChungBoiChung()
 }
 void sapXepPhanTuMang1Chieu()
 {
-    int array[100];
+    int intergerArray[100];
+    int i;
+    int tmp; //temperary
     int length;
     printf("Nhap so luong phan tu cua Mang:   \n");
     scanf("%d", &length);
-    for (int i = 0; i < length; i++)
+    printf("Nhap du lieu mang %d phan tu:   \n", length);
+    for (i = 0; i < length; i++)
     {
+        printf("mang[%d] = ", i);
+        scanf("%d", &intergerArray[i]);
+    }
+    printf("Sap xep Tang dan du lieu mang %d phan tu:   \n", length);
+    for (i = 0; i < length - 1; i++)
+    {
+        if (intergerArray[i] > intergerArray[i + 1])
+        {
+            tmp = intergerArray[i];
+            intergerArray[i] = intergerArray[i+1];
+            intergerArray[i+1] = tmp;
+            i = -1;
+        }
 
+    }
+    for (i = 0; i < length; i++)
+    {
+        printf("mang[%d] = %d\n", i, intergerArray[i]);
     }
 
 }
