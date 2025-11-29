@@ -1,9 +1,9 @@
 #include <stdio.h>
-void kiemTraSoNguyen() 
+void kiemTraSoNguyen()
 {
     printf("Kiem tra so nguyen:   \n");
 }
-void uocChungBoiChung() 
+void uocChungBoiChung()
 {
     printf("Tim uoc chung & boi chung:   \n");
 }
@@ -33,8 +33,8 @@ void sapXepPhanTuMang1Chieu()
         }
     }
     printf("Xuat mang du lieu %d phan tu Giam dan:   \n", length);
-    for (i = length - 1; i > -1 ; i--)
-    { 
+    for (i = length - 1; i > -1; i--)
+    {
         printf("mang[%d] = %d\n", i, intergerArray[i]);
     }
     printf("Xuat mang du lieu %d phan tu Tang dan:   \n", length);
@@ -79,7 +79,7 @@ void lapChucNang(int chonChucNang)
         default:
             printf("Hay chon cac chuc nang tren MENU: [0-10]");
             break;
-           
+
         }
         printf("\n");
         printf("Ban co muon tiep tuc chuc nang: [1-Co] [Khac-Khong]\n");
@@ -102,7 +102,7 @@ int main()
         printf("8. CN8\n");
         printf("9. CN9\n");
         printf("10. CN10\n");
-        printf("0. Thoat\n");  
+        printf("0. Thoat\n");
         printf("Hay chon CN tu [0-10]\n");
         scanf("%d", &chonChucNang);
         lapChucNang(chonChucNang);
