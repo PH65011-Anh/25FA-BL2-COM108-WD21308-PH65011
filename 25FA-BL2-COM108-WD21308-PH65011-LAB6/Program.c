@@ -1,6 +1,4 @@
-// CConsoleApplication.c : file nay chua 'main' function. 
-// Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
-
+//Lab6 - Bai 1
 #include <stdio.h>
 int mang(int n)
 {
