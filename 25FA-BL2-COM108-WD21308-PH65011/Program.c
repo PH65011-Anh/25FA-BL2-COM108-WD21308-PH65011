@@ -7,6 +7,18 @@ void uocChungBoiChung()
 {
     printf("Tim uoc chung & boi chung:   \n");
 }
+void sapXepPhanTuMang1Chieu()
+{
+    int array[100];
+    int length;
+    printf("Nhap so luong phan tu cua Mang:   \n");
+    scanf("%d", &length);
+    for (int i = 0; i < length; i++)
+    {
+
+    }
+
+}
 void lapChucNang(int chonChucNang)
 {
     int tiepTuc = 1;
@@ -18,9 +30,10 @@ void lapChucNang(int chonChucNang)
             kiemTraSoNguyen();
             break;
         case 2:
-            soPhanTu();
+            uocChungBoiChung();
             break;
         case 3:
+            sapXepPhanTuMang1Chieu();
             break;
         case 4:
             break;
@@ -55,8 +68,8 @@ int main()
     {
         printf("      MENU\n");
         printf("1. Kiem Tra So Nguyen\n");
-        printf("2. Tinh tb tong cac so chia het cho 3 \n");
-        printf("3. CN3\n");
+        printf("2. Uoc Chung & Boi Chung \n");
+        printf("3. Sap xep mang\n");
         printf("4. CN4\n");
         printf("5. CN5\n");
         printf("6. CN6\n");
