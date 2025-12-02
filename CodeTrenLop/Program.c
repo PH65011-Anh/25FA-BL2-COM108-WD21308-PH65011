@@ -46,22 +46,6 @@ void sapXepPhanTuMang1Chieu()
 }
 void demoMang2Chieu()
 {
-    //string - "string.h"
-    //char mangKyTu[10] = { 'A', 'n', 'h' };
-    char mangKyTu[10] = "Anh";
-    for (int i = 0; i < 3; i++)
-    {
-        scanf(" %c", &mangKyTu[i]);
-    }
-    //fgets(mangKyTu);
-    for (int i = 0; i < 3; i++)
-    {
-        printf("%c", mangKyTu[i]);
-    }
-    printf("\n");
-    //puts(mangKyTu);
-
-
     int array[2][3];
     for (int i = 0; i < 2; i++)
     {
@@ -81,6 +65,28 @@ void demoMang2Chieu()
         printf("\n");
     }
 
+}
+void demoMangKyTu()
+{
+
+    //string - "string.h"
+    //char mangKyTu[10] = { 'A', 'n', 'h' };
+    char mangKyTu[10];
+    for (int i = 0; i < 10; i++)
+    {
+        scanf(" %c", &mangKyTu[i]);
+        if (mangKyTu[i] == '.')
+        {
+            break;
+        }
+    }
+    //fgets(mangKyTu);
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%c", mangKyTu[i]);
+    }
+    printf("\n");
+    //puts(mangKyTu);
 }
 void lapChucNang(int chonChucNang)
 {
@@ -102,6 +108,7 @@ void lapChucNang(int chonChucNang)
             demoMang2Chieu();
             break;
         case 5:
+            demoMangKyTu();
             break;
         case 6:
             break;
