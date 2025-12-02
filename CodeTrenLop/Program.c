@@ -44,6 +44,44 @@ void sapXepPhanTuMang1Chieu()
     }
 
 }
+void demoMang2Chieu()
+{
+    //string - "string.h"
+    //char mangKyTu[10] = { 'A', 'n', 'h' };
+    char mangKyTu[10] = "Anh";
+    for (int i = 0; i < 3; i++)
+    {
+        scanf(" %c", &mangKyTu[i]);
+    }
+    //fgets(mangKyTu);
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%c", mangKyTu[i]);
+    }
+    printf("\n");
+    //puts(mangKyTu);
+
+
+    int array[2][3];
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("Mang[%d][%d] = ", i, j);
+            scanf("%d", &array[i][j]);
+        }
+    }
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d, ", array[i][j]);
+         
+        }
+        printf("\n");
+    }
+
+}
 void lapChucNang(int chonChucNang)
 {
     int tiepTuc = 1;
@@ -61,6 +99,7 @@ void lapChucNang(int chonChucNang)
             sapXepPhanTuMang1Chieu();
             break;
         case 4:
+            demoMang2Chieu();
             break;
         case 5:
             break;
@@ -94,8 +133,8 @@ int main()
         printf("      MENU\n");
         printf("1. Kiem Tra So Nguyen\n");
         printf("2. Uoc Chung & Boi Chung \n");
-        printf("3. Sap xep mang\n");
-        printf("4. CN4\n");
+        printf("3. Sap xep mang 1 chieu\n");
+        printf("4. Demo Mang 2 Chieu\n");
         printf("5. CN5\n");
         printf("6. CN6\n");
         printf("7. CN7\n");
