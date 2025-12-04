@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 void kiemTraSoNguyen()
 {
     printf("Kiem tra so nguyen:   \n");
@@ -66,27 +67,65 @@ void demoMang2Chieu()
     }
 
 }
-void demoMangKyTu()
+void demoString()
 {
-
-    //string - "string.h"
-    //char mangKyTu[10] = { 'A', 'n', 'h' };
-    char mangKyTu[10];
-    for (int i = 0; i < 10; i++)
+    /*string - "string.h"
+    char mangKyTu[10] = { 'A', 'n', 'h' };*/
+    char mangKyTu[50];
+    /*for (int i = 0; i < 10; i++)
     {
         scanf(" %c", &mangKyTu[i]);
         if (mangKyTu[i] == '.')
         {
             break;
         }
-    }
+    }*/
     //fgets(mangKyTu);
-    for (int i = 0; i < 10; i++)
+    while (getchar() != '\n');
+    printf("Nhap du lieu: ");
+    fgets(mangKyTu, sizeof(mangKyTu), stdin);
+    /*for (int i = 0; i < 10; i++)
     {
         printf("%c", mangKyTu[i]);
-    }
+    }*/
+    printf("%s", mangKyTu);
     printf("\n");
     //puts(mangKyTu);
+    printf("String Length :");    
+    printf("%d", strlen(mangKyTu)-1);
+    printf("\n");
+    //printf("String Compare The Same As :"); // so sanh
+    //printf("%d", strcmp("ABC","ABC"));   
+    //printf("\n");
+    //printf("String Compare Less:");
+    //printf("%d", strcmp("A","C"));
+    //printf("\n");
+    //printf("String Compare Greater than :");
+    //printf("%d", strcmp("C","A"));
+    printf("String Reverse (Encryption): ");
+    printf("%s", strrev(mangKyTu));
+    printf("\n");
+    printf("String Reverse (Decryption): ");
+    printf("%s", strrev(mangKyTu));
+    printf("\n");
+    printf("String Lower: ");
+    printf("%s", strlwr (mangKyTu));
+    printf("\n");
+    printf("String Uper: ");
+    printf("%s", strupr(mangKyTu));
+    printf("\n");
+    printf("Find String in String: ");
+    if (strstr(mangKyTu, "A") != NULL)
+    {
+        printf("Found:\n");
+        printf("%s", strstr(mangKyTu, "A"));
+    }
+    else
+    {
+        printf("NOT FOUND\n");
+    }
+    
+    printf("\n");
 }
 void lapChucNang(int chonChucNang)
 {
@@ -107,8 +146,8 @@ void lapChucNang(int chonChucNang)
         case 4:
             demoMang2Chieu();
             break;
-        case 5:
-            demoMangKyTu();
+        case 5:    
+            demoString();
             break;
         case 6:
             break;
@@ -142,7 +181,7 @@ int main()
         printf("2. Uoc Chung & Boi Chung \n");
         printf("3. Sap xep mang 1 chieu\n");
         printf("4. Demo Mang 2 Chieu\n");
-        printf("5. CN5\n");
+        printf("5. Demo String\n");
         printf("6. CN6\n");
         printf("7. CN7\n");
         printf("8. CN8\n");
